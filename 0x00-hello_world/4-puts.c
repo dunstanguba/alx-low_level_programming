@@ -1,5 +1,3 @@
-lines (10 sloc)  154 Bytes
-
 #include <stdio.h>
 /**
  * main - main block
