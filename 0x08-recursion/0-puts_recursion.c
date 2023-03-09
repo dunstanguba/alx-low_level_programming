@@ -1,24 +1,23 @@
 #include "main.h"
 
 /**
- * _pow_recursion - Search a string for any of a set of bytes.
- * @x: base
- * @y: exposant
- * Return: Pointer to the byte in `s` that matches one of the bytes in `accept`
- * or NULL if no such byte is found.
+ * _puts_recursion - prints a string, followed by a new line
+ * @s: pointer to the string
+ * Return: void
  */
 
-int _pow_recursion(int x, int y)
+
+void _puts_recursion(char *s)
 {
 
-	if (y < 0)
-		return (-1);
-	else if (y == 1)
-		return (x);
-	else if (y == 0)
-		return (1);
-
-	return (x * _pow_recursion(x, y - 1));
+	if (*s == '\0')
+	{
+		_putchar('\n');
+	}
+	else
+	{
+		_putchar(*s);
+		_puts_recursion(s + 1);
+	}
 
 }
-
